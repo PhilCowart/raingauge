@@ -1,0 +1,26 @@
+{
+  "name": "Rain Gauge",
+  "homepage": "https://github.com/PhilCowart/raingauge",
+  "authors": [
+    "Phil Cowart <philipcowart@gmail.com>"
+  ],
+  "description": "Angular frontend for Rain Gauge App",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "angular-sanitize": "^1.6.1",
+    "angular-loader": "^1.6.1",
+    "angular-resource": "^1.6.1",
+    "angular-environment": "^1.0.4",
+    "angular-animate": "^1.6.1"
+  }
+}
