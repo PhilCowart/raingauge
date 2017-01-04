@@ -1,0 +1,12 @@
+
+$bp-larger-than-old-mobile  : "min-width: 375px" !default;
+$bp-larger-than-mobile    	: "min-width: 475px" !default;
+$bp-larger-than-phablet   	: "min-width: 550px" !default;
+$bp-larger-than-tablet    	: "min-width: 768px" !default;
+$bp-larger-than-desktop		: "min-width: 1024px" !default;
+$bp-larger-than-desktophd 	: "min-width: 1300px" !default;
+
+$bp-smaller-than-desktop 	: "max-width: 1023px";
+$bp-smaller-than-tablet  	: "max-width: 767px";
+$bp-smaller-than-phablet  	: "max-width: 549px";
+$bp-smaller-than-old-mobile : "max-width: 374px";

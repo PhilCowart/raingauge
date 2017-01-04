@@ -1,0 +1,76 @@
+
+
+
+
+
+
+@mixin drop_shadow {
+  -webkit-box-shadow: 0 0 2px rgba(0,0,0,.1),1px 1px 4px rgba(0,0,0,.1);
+  box-shadow: 0 0 2px rgba(0,0,0,.1),1px 1px 4px rgba(0,0,0,.1);
+}
+
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+@mixin transition ($prop: all, $time: 1s, $ease: ease-in-out, $delay: 0ms) {
+  -webkit-transition: $prop $time $ease $delay;
+  -moz-transition: $prop $time $ease $delay;
+  -o-transition: $prop $time $ease $delay;
+  -ms-transition: $prop $time $ease $delay;
+  transition: $prop $time $ease $delay;
+}
+
+
+@mixin row {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+
+@mixin animation ($animation, $time: 1s, $repeat: infinite) {
+-webkit-animation: $animation $time $repeat;
+-moz-animation: $animation $time $repeat;
+-o-animation: $animation $time $repeat;
+animation: $animation $time $repeat;
+}
+
+
+
+@mixin keyframes ( $animation ) {
+
+  @-webkit-keyframes #{$animation} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animation} {
+    @content;
+  }
+
+  @-o-keyframes #{$animation} {
+    @content;
+  }
+
+  @keyframes #{$animation} {
+    @content;
+  }
+
+}
+
+
+
+
+
