@@ -1,6 +1,6 @@
 ## About Rain Gauge
 
-Rain Gauge is a personal rain tracking tool.
+Rain Gauge is a personal rain tracking tool. Built as an expirement for combining Angular with Laravel as a combined service instead of seperate services. 
 
 ## Contributing
 
