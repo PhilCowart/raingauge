@@ -21,4 +21,5 @@ rainGauge.config(['$routeProvider', function($routeProvider, $rootScope, $route)
         templateUrl: '/angular-views/login.html',
   	})
 
+
 }])
