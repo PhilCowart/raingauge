@@ -14,7 +14,7 @@ var rainGauge = angular.module('rainGauge', [
 	'rainGaugeDirectives',
 	'rainGaugeControllers',
 	'rainGaugeFilters',
-
+	'satellizer',
 ])
 
 

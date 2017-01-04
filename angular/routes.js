@@ -13,13 +13,22 @@ rainGauge.config(['$routeProvider', function($routeProvider, $rootScope, $route)
     $routeProvider
 
   	.when('/', {
-        redirectTo: '/submissions'
+  		templateUrl: '/angular-views/dashboard.html',
+  		controller: 'DashboardCtrl',
+  		resolve: {
+            myAccount: function(accountFactory){
+                return accountFactory.checkAccess();
+            },
+        }
   	})
 
 
   	.when('/login', {
         templateUrl: '/angular-views/login.html',
+        controller: 'AuthenticationCtrl',
   	})
+
+
 
 
 }])

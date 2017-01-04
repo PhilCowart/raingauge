@@ -17,7 +17,6 @@
 
      <body>
           <main>
-              <h1>{{ dj }}</h1>
               <div ng-view></div>
           </main>
 

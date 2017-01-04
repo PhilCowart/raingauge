@@ -10,6 +10,7 @@ var gulp = require('gulp'),
             'bower_components/angular-route/angular-route.js',
             'bower_components/angular-environment/dist/angular-environment.js',
             'bower_components/angular-animate/angular-animate.js',
+            'bower_components/satellizer/dist/satellizer.js',
         ])
         .pipe(gp_concat('bower-components.js'))
         .pipe(gulp.dest('../public'));
