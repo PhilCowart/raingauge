@@ -23,8 +23,14 @@ var rainGauge = angular.module('rainGauge', [
 })
 
 
-.controller('ApplicationCtrl', function( $scope ){
-	$scope.dj = 'PHILthy';
+.controller('ApplicationCtrl', function( $scope, $auth ){
+
+
+    // $scope.isAuthenticated = function() {
+    //     return $auth.isAuthenticated();
+    // };
+   
+
 })
 
 
@@ -82,11 +88,8 @@ rainGaugeFactories.factory('accountFactory', function($http, $auth, $q, $locatio
 		var deferred = $q.defer();
 	 	$http.get( envService.read('api') + '/user' )
 		 	.then(function onSuccess(response){
-		 		console.log( response );
 		 		deferred.resolve(response.data);
 		 		account.profile = response.data;
-				if( account.profile.client_id == null ){ $location.path( '/account/setup' ); }
-				else if( account.profile.force_reset == true ){ $location.path( '/reset-password'); }
 		 	})
 		 	.catch(function onError(response){
 		 		$auth.logout();
@@ -103,13 +106,14 @@ rainGaugeFactories.factory('accountFactory', function($http, $auth, $q, $locatio
 });
 
 
-rainGaugeControllers.controller('AuthenticationCtrl', function($scope, $auth, accountFactory) {
+rainGaugeControllers.controller('AuthenticationCtrl', function($scope, $auth, $location, accountFactory) {
 
 
-	$scope.authenticate = function(provider){
+	$scope.login = function(provider){
 
 		$auth.login( provider )
 			.then(function onSuccess(response){
+				console.log( response );
 				$location.path( '/' );
 			})
 			.catch( function onError(response){
@@ -117,12 +121,16 @@ rainGaugeControllers.controller('AuthenticationCtrl', function($scope, $auth, ac
 			})
 	}
 
+
+
+
 });
 
 rainGaugeControllers.controller('DashboardCtrl', function($scope, $rootScope, $auth, accountFactory, myAccount) {
 
 	$rootScope.account = myAccount;
 	
+	console.log( myAccount );
 
 });
 

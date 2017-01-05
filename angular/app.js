@@ -23,7 +23,13 @@ var rainGauge = angular.module('rainGauge', [
 })
 
 
-.controller('ApplicationCtrl', function( $scope ){
-	$scope.dj = 'PHILthy';
+.controller('ApplicationCtrl', function( $scope, $auth ){
+
+
+    // $scope.isAuthenticated = function() {
+    //     return $auth.isAuthenticated();
+    // };
+   
+
 })
 

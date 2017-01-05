@@ -31,7 +31,19 @@ class AuthenticateController extends Controller
 
     public function currentUser()
     {
+        // try {
+        //     if( ! $user = JWTAuth::parseTokent()->authenticate()) {
+        //         return response()->json(['User Not Found'], 404);
+        //     }
+        // } catch ( Tymon\JWTAuth\Exceptions\TokenExpiredException $e)  {
+        //     return response()->json(['Token Expired'], $e->getStatusCode());
+        // } catch ( Tymon\JWTAuth\Exceptions\TokenInvalidException $e)  {
+        //     return response()->json(['Token Invalid'], $e->getStatusCode());
+        // } catch ( Tymon\JWTAuth\Exceptions\TokenInvalidException $e)  {
+        //     return response()->json(['Token Missing'], $e->getStatusCode());
+        // }
         $user = JWTAuth::toUser();
+        $user->load('locations');
         return $user;
     }
 

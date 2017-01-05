@@ -11,7 +11,7 @@ class Location extends Model
 	protected $fillable = [
 		'title',
 		'zip',
-	]
+	];
 
 
     protected $dates = [

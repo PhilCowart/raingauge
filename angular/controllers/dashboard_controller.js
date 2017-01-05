@@ -2,5 +2,6 @@ rainGaugeControllers.controller('DashboardCtrl', function($scope, $rootScope, $a
 
 	$rootScope.account = myAccount;
 	
+	console.log( myAccount );
 
 });
